@@ -13,13 +13,21 @@ public class Player : MonoBehaviour
   }
 
   private void FixedUpdate(){
-    //Reset MoveDelta
-    moveDelta = Vector3.zero;
-
+    
     float x = Input.GetAxisRaw("Horizontal");
     float y = Input.GetAxisRaw("Vertical");
+    //Reset MoveDelta
+    moveDelta =  new Vector3(x,y,0);
 
-    Debug.Log(x);
-    Debug.Log(y);
+    //Swap sprite direction, wether you're going right or left
+    if(moveDelta.x > 0){
+      transform.localScale = Vector3.one;
+
+    }
+    else if(moveDelta.x < 0)
+      transform.localScale = new Vector3(-1, 1, 0);
+
+
+   transform.Translate(moveDelta * Time.deltaTime);
   }
 }
