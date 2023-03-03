@@ -1196,7 +1196,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1204,6 +1204,48 @@ TextureImporter:
       bones: []
       spriteID: ff338bc4cc8e44373b71931e11eb01cc
       internalID: -1342725743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4cf91b81e844552a87584fbe443db9f
+      internalID: -1961172556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4420db1a0069a3eb6fd97c7c5b297d
+      internalID: -691361200
       vertices: []
       indices: 
       edges: []
@@ -1220,6 +1262,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       pillar_1: -2015646386
+      chest_0: -1961172556
       stairs_0: 1820531383
       wall_0: 1923252949
       torch_0: -1205414456
@@ -1242,6 +1285,7 @@ TextureImporter:
       floor_2: -446270777
       floor_10: -1535971074
       torch_4: 1067760810
+      chest_1: -691361200
       pillar_3: 1096253366
       floor_6: -2002751660
       crate_0: -233099960
