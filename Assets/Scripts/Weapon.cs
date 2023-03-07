@@ -14,11 +14,13 @@ public class Weapon : Collidable
     public SpriteRenderer spriteRenderer;
     
     // Swing
+    private Animator anim;
     private float cooldown = 0.5f;
     private float lastSwing;
     protected override void Start() {
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     protected override void Update(){
@@ -49,7 +51,7 @@ public class Weapon : Collidable
      
     }
 
-    private void Swing(){
-        Debug.Log("Swing");
+    public void Swing(){
+       anim.SetTrigger("Swing");
     }
 }
