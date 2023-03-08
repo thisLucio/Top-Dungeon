@@ -338,10 +338,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 44.75
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1264,10 +1264,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSprites: []
-  weaponSprites: []
-  weaponPrices: 
+  weaponSprites:
+  - {fileID: -1246229560, guid: 50676e898ab99d37fb721c495c13a9ed, type: 3}
+  - {fileID: 1189416166, guid: 50676e898ab99d37fb721c495c13a9ed, type: 3}
+  - {fileID: -1670408914, guid: 50676e898ab99d37fb721c495c13a9ed, type: 3}
+  - {fileID: -431745936, guid: 50676e898ab99d37fb721c495c13a9ed, type: 3}
+  - {fileID: 1123054433, guid: 50676e898ab99d37fb721c495c13a9ed, type: 3}
+  - {fileID: -150240937, guid: 50676e898ab99d37fb721c495c13a9ed, type: 3}
+  - {fileID: -265786628, guid: 50676e898ab99d37fb721c495c13a9ed, type: 3}
+  weaponPrices: 1e0000004600000082000000c80000001301000090010000
   xpTable: 
   player: {fileID: 1435247878}
+  weapon: {fileID: 1344315636}
   floatingTextManager: {fileID: 465222626}
   pesos: 0
   experience: 0
@@ -14253,7 +14261,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1341243729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1499453108}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: OnUpgradeClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1341243729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14405,8 +14425,15 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoint: 1
-  pushForce: 4
+  damagePoint: 01000000020000000300000004000000050000000600000007000000
+  pushForce:
+  - 2
+  - 2.2
+  - 2.5
+  - 4
+  - 5
+  - 6
+  - 10
   weaponLevel: 0
   spriteRenderer: {fileID: 0}
 --- !u!61 &1344315637
@@ -14770,6 +14797,7 @@ GameObject:
   - component: {fileID: 1499453102}
   - component: {fileID: 1499453106}
   - component: {fileID: 1499453107}
+  - component: {fileID: 1499453108}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -14892,6 +14920,26 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1499453108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499453101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e43d8a32baa1f9eaad7cd703d7b437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 906910789}
+  hitpointText: {fileID: 1429316664}
+  pesosText: {fileID: 682156397}
+  upgradeCostText: {fileID: 174245420}
+  xpText: {fileID: 1031795715}
+  characterSelectionSprite: {fileID: 762575264}
+  weaponSprite: {fileID: 1977483210}
+  xpBar: {fileID: 1574581430}
 --- !u!1 &1574581429
 GameObject:
   m_ObjectHideFlags: 0
@@ -15933,6 +15981,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: show
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1499453108}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: UpdateMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2095314967
