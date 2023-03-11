@@ -75,9 +75,8 @@ public class CharacterMenu : MonoBehaviour
 
         float completionRatio = (float)currXpIntoLevel / (float)diff;
         xpBar.localScale = new Vector3(completionRatio, 1, 1);
+        xpText.text = currXpIntoLevel.ToString() + " / " + diff;
      }
 
-     xpText.text = "NOT IMPLEMENTED";
-     xpBar.localScale = new Vector3(0.5f, 0, 0);
   }
 }
