@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour
     {
         if(GameManager.instance != null){
             Destroy(gameObject);
+            Destroy(player.gameObject);
+            Destroy(floatingTextManager.gameObject);
             return;
         }
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;
