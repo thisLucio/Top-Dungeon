@@ -10,6 +10,7 @@ public class Player : Mover
   protected override void Start(){
     base.Start();
     spriteRenderer = GetComponent<SpriteRenderer>();
+    DontDestroyOnLoad(gameObject);
   }
   private void FixedUpdate(){
     
