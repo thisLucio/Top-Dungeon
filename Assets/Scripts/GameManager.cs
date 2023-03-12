@@ -84,6 +84,18 @@ public class GameManager : MonoBehaviour
         return xp;
     }
 
+    public void GrantXp(int xp){
+        int currLevel = GetCurrentLevel();
+        experience = xp;
+        if(currLevel < GetCurrentLevel()){
+            OnLevelUp();
+        }
+
+    }
+
+    public void OnLevelUp(){
+        player.OnLevelUp();
+    }
     // Save State
     /*
         INT preferedSkin
@@ -110,7 +122,11 @@ public class GameManager : MonoBehaviour
         
         //ChangeSkin
         pesos = int.Parse(data[1]);
+
+        // Experience
         experience = int.Parse(data[2]);
+        if(GetCurrentLevel() != 1)
+            player.SetLevel(GetCurrentLevel());
         //ChangeWeaponLevel
         weapon.SetWeaponLevel(int.Parse(data[3]));
         Debug.Log("LoadState");
